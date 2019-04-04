@@ -118,16 +118,16 @@ class WcWavesGateway extends WC_Payment_Gateway
         }
 
 		// Set decimals for tokens other than default value 8
-		if (get_woocommerce_currency() == "Ecop") {
+		if ($this->assetCode == "Ecop") {
 		$total_waves = $total_converted * 100000;
 		}
-		else if (get_woocommerce_currency() == "TN") {
+		else if ($this->assetCode == "TN") {
 		$total_waves = $total_converted * 100;
 		}
-		else if (get_woocommerce_currency() == "Mango") {
+		else if ($this->assetCode == "Mango") {
 		$total_waves = $total_converted * 100;
 		}
-    else if (get_woocommerce_currency() == "BearWaves") {
+    else if ($this->assetCode == "BearWaves") {
 		$total_waves = $total_converted * 100;
 		}
 		else {
